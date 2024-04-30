@@ -62,10 +62,11 @@ section {
 
 }
 [class*="wrapper"] {
-    max-width: 1716px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .list-link:hover {
     color: lightslategray;
     text-decoration: none;
@@ -1914,7 +1915,7 @@ textarea::placeholder {
 .contact__left {
     padding: 0 10%;
 }
-.contact__wrapper h1 {font-size: 64px;}
+/*.contact__wrapper h1 {font-size: 64px;}*/
 .contact__left {
     padding: 0 0;
     margin: 0;
