@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&display=swap');
 @import url("reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600;700&display=swap');
 @font-face {
   font-family: "Gerhaus";
   src: url('gerhaus/Gerhaus-Regular.ttf') format('truetype');
@@ -128,8 +128,12 @@ section {
 }
 .menu__link:hover {
     color: grey;
-    transition: 0.2s;
-    text-decoration: underline;
+    transition: 0.3s;
+/*    text-decoration: underline;*/
+/*    color: #fff;*/
+    padding-left: 2px;
+    border-bottom: #ff0000 solid 2px;
+    padding-bottom: 10px;
 }
 .cart-header {
     color: #fff;
@@ -333,13 +337,13 @@ section {
     .menu-item__icon {
         display: block;
     }
-    .social-media {
+    .menu-item__icon .social-media__header {
         display: flex;
         justify-content: space-around;
         align-items: self-end;
         font-size: 45px;
     }
-    .menu-item__icon > .social-media {margin-top: 40%;}
+    .menu-item__icon > .social-media__header {margin-top: 40%;}
     .list-link {
         color: #fff;
         font-weight: 800;
@@ -380,7 +384,7 @@ section {
     width: 100px;
     text-align: center;
 }
-.social-media {
+.menu-item__icon .social-media__header {
     font-size: 35px;}
 }
 
@@ -1150,6 +1154,9 @@ section {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+.wrapper {
+    padding: 0;
+}
 }
 @media(max-width: 634px) {
 /*.default-container {
@@ -1157,9 +1164,7 @@ section {
     height: 80%;
 }*/
 .curved-line-4 {
-    margin: 0;
-    width: 100vw;
-    
+    margin: 0;    
 }
 .poster-label>p {
     font-size: 25px}
@@ -1976,73 +1981,152 @@ h1 {font-size: 34px;}
 }}
 
 
-/*FOOTER*/
+  /*FOOTER*/
 .footer-main {
-    width: 100%;
-    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100D08;
+    font-family: "Fira Sans", sans-serif;
+    letter-spacing: 1px;
 }
 .section-footer {
-    margin: 0 0 0 0px;
+    margin: 0;
 }
 .footer {
-    color: #fff; /* Цвет текста */
-    padding: 30px 0; /* Внутренний отступ вверху и внизу */
-   
+    width: 100%;
+    padding: 30px 0 0 0; /* Внутренний отступ вверху и внизу */
 }
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Грид с автоматическим переносом элементов */
-    gap: 20px; /* Отступ между элементами */
-}
-.logo {
-    margin: 0;
+.footer-logo {
+    max-width: 300px;
+    max-height: 150px;
     display: flex;
+    justify-content: center;
     align-items: center;
+
 }
-.company-description {
-    margin-bottom: 20px; /* Отступ снизу */
-    padding: 0 15px;
-    border-left: solid #fff 2px;
-    margin: 5px;
+.footer-logo img {
+    width: 250px;
+    height: 150px;
+    box-shadow: 2px 5px 10px yellow;
 }
-.social-media {
-    list-style: none; /* Убираем маркеры у списка */
-    padding: 0; /* Убираем внутренний отступ у списка */
-    margin: 0; /* Убираем внешний отступ у списка */
+.box-copyright-social__footer {
+    text-align: left;
+    margin: 0;
+    padding: 0;
 }
-.social-media .list-item {
+.social-media__footer  {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.social-media__footer  li a {
+  color: #fff;
+  font-size: 22px;
+}
+.social-media__footer  li {
+  text-align: center;
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 10px 10px 0;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+.social-media__footer  li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+.social-media__footer  li:hover {
+  background-color: #fff; 
+}
+.social-media__footer  li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+.social-media__footer  li:hover a {
+  color: #000;
+}
+
+
+/*AFTER SOCIAL*/
+.footer-list .list-item {
     display: inline-block; /* Размещаем элементы списка в строку */
-    margin-right: 10px; /* Отступ между элементами списка */
-}
-.copyright-notice {
-    opacity: 0.8; /* Прозрачность копирайт-нотиса */
-}
-.footer-title {
-    font-size: 18px; /* Размер шрифта заголовков разделов */
-    text-transform: uppercase; /* Преобразование текста в верхний регистр */
-    margin: 0 0 20px 0px; /* Убираем внешний отступ у списка */
+    margin-right: 40px; /* Устанавливаем отступ между элементами списка */
 }
 .footer-list {
-    list-style: none; /* Убираем маркеры у списка */
-    padding: 0; /* Убираем внутренний отступ у списка */
+    padding: 40px;
     line-height: 1.8;
+    line-height: 1.8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
 }
-.list-link {
-    color: #fff; /* Цвет ссылок */
-    text-decoration: none; /* Убираем подчеркивание у ссылок */
+
+.footer-list .list-link {
+    font-size: 24px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbb;
+    transition: all 0.3s ease;
 }
-.list-link:hover {
-    color: lightslategray;
+.footer-list .list-link i {
+    margin-right: 20px;
 }
-.company-data .social-media .list-link {
-    font-size: 40px;
+.footer-list .list-link:hover {
+    color: #fff;
+    padding-left: 2px;
+    border-bottom: #ff0000 solid 2px;
+    padding-bottom: 10px;
 }
-@media (min-width: 1920px) {
-    .list-link {font-size: 20px}
-    .footer-title {font-size: 25px;}
-    .company-description {font-size: 20px;
-                          margin: 50px 0;}
-    .copyright-notice {
-        font-size: 24px;}
+.copyright__block {
+    padding: 20px 40px 0 40px;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    bottom: 0;
 }
+@media(max-width: 1350.98px) {
+    .footer-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+ }
+@media(max-width: 991.98px) {
+    .footer-list {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+
+    .footer-list .list-item {
+        margin: 0 0 15px 0;
+     
+    }
+}
+
+
+
+
 
