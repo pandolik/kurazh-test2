@@ -1441,7 +1441,7 @@ p#default-container__p {
     width: 40%;
     float: left;
     position: relative;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 .team__title {
     font-size: 60px;
@@ -2000,18 +2000,12 @@ h1 {font-size: 34px;}
 .footer-logo {
     display: flex;
     justify-content: center;
-    align-items: center;
 
 }
 .footer-logo img {
     width: 250px;
     height: 150px;
     box-shadow: 2px 5px 10px yellow;
-}
-.box-copyright-social__footer {
-    text-align: left;
-    margin: 0;
-    padding: 0;
 }
 .social-media__footer  {
   position: relative;
@@ -2020,7 +2014,6 @@ h1 {font-size: 34px;}
   padding: 0;
 }
 .social-media__footer  li a {
-  color: #fff;
   font-size: 22px;
 }
 .social-media__footer  li {
@@ -2054,7 +2047,6 @@ h1 {font-size: 34px;}
   background-color: #fff; 
 }
 .social-media__footer  li:hover:after {
-  opacity: 1;  
   transform: scale(1.12);
   transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
 }
@@ -2066,21 +2058,19 @@ h1 {font-size: 34px;}
 /*AFTER SOCIAL*/
 .footer-list .list-item {
     display: inline-block; /* Размещаем элементы списка в строку */
-    margin-right: 40px; /* Устанавливаем отступ между элементами списка */
+    margin-right: 30px; /* Устанавливаем отступ между элементами списка */
 }
 .footer-list {
     padding: 40px;
     line-height: 1.8;
-    line-height: 1.8;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-
 }
 
 .footer-list .list-link {
     font-size: 24px;
-    text-transform: capitalize;
+/*    text-transform: capitalize;*/
     color: #fff;
     text-decoration: none;
     font-weight: 300;
@@ -2108,7 +2098,6 @@ h1 {font-size: 34px;}
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
     }
  }
 @media(max-width: 991.98px) {
@@ -2120,7 +2109,6 @@ h1 {font-size: 34px;}
 
     .footer-list .list-item {
         margin: 0 0 15px 0;
-     
     }
 }
 
