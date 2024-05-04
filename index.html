@@ -22,7 +22,7 @@
 <body>
 <header class="header">
         <div class="header__container">
-            <a href="#" class="header__logo">
+            <a href="index.html" class="header__logo">
                 <img src="assets/img/logo/logg.svg" alt="logo">
             </a>
             <nav class="header__menu menu">
@@ -117,7 +117,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas dolorum
                      voluptates corrupti tenetur a optio alias dolore praesentium? Sapiente tempore recusandae obcaecati, 
                     enim veritatis ex eveniet voluptatem nobis nulla?</p>
-                    <a href="#">ЧИТАТИ БiЛЬШЕ</a>
+                    <div id="cinemas__read-more1">ЧИТАТИ БiЛЬШЕ</div>
             </div>
         </div>
     </div>
@@ -131,7 +131,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas dolorum
                      voluptates corrupti tenetur a optio alias dolore praesentium? Sapiente tempore recusandae obcaecati, 
                     enim veritatis ex eveniet voluptatem nobis nulla?</p>
-                    <a href="#">ЧИТАТИ БiЛЬШЕ</a>
+                    <div id="cinemas__read-more2">ЧИТАТИ БiЛЬШЕ</div>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas dolorum
                      voluptates corrupti tenetur a optio alias dolore praesentium? Sapiente tempore recusandae obcaecati, 
                     enim veritatis ex eveniet voluptatem nobis nulla?</p>
-                    <a href="#">ЧИТАТИ БiЛЬШЕ</a>
+                    <div href="#" id="cinemas__read-more3">ЧИТАТИ БiЛЬШЕ</div>
             </div>
         </div>
     </div></section>
@@ -459,16 +459,14 @@
                 <!-- <p class="company-description">Чекаємо саме на вас у гості. Раді вітати кожного. Ми дружня акторська родина.</p> -->
                 <div class="box-copyright-social__footer">
                     <ul class="list social-media__footer">
-                        <a href="https://www.youtube.com/@kurazh_studio">
-                            <li class="list-item">
-                                <a href="https://www.youtube.com/@kurazh_studio" class="list-link footer__icon"><i class="fa-brands fa-youtube"></i></a>
-                            </li>
-                        </a>
+                        <li class="list-item">
+                            <a href="https://www.youtube.com/@kurazh_studio" class="list-link footer__icon"><i class="fa-brands fa-youtube"></i></a>
+                        </li>
                         <li class="list-item">
                             <a href="https://www.intagram.com/kurazh_studio" class="list-link footer__icon"><i class="fa fa-instagram"></i></a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="list-link footer__icon"><i class="fa fa-twitter"></i></a>
+                            <a href="https://x.com/PANDOLIKP?t=kpfl98ZLjuGtSaAu-fColA&s=09" class="list-link footer__icon"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li class="list-item">
                             <a href="#" class="list-link footer__icon"><i class="fa fa-pinterest"></i></a>
@@ -616,6 +614,34 @@
             document.documentElement.classList.remove('menu-open');
         }, 200); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
+    document.getElementById('cinemas__read-more1').addEventListener('click', function() {
+        var block = document.querySelector('.block__projects1');
+        block.classList.add('block-outlined');
+        block.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+            block.classList.remove('block-outlined');
+            // Закрываем меню после прокрутки
+            document.documentElement.classList.remove('menu-open');
+        }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
+    });document.getElementById('cinemas__read-more2').addEventListener('click', function() {
+        var block = document.querySelector('.block__projects2');
+        block.classList.add('block-outlined');
+        block.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+            block.classList.remove('block-outlined');
+            // Закрываем меню после прокрутки
+            document.documentElement.classList.remove('menu-open');
+        }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
+    });document.getElementById('cinemas__read-more3').addEventListener('click', function() {
+        var block = document.querySelector('.block__projects3');
+        block.classList.add('block-outlined');
+        block.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+            block.classList.remove('block-outlined');
+            // Закрываем меню после прокрутки
+            document.documentElement.classList.remove('menu-open');
+        }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
+    });
 
 
 
@@ -704,9 +730,9 @@
 
     // Animation in Default-container section
     window.onload = function() {
-        fadeInOnScroll('default-container__p', 1000); // Для элемента с id 'default-container__p'
-        fadeInOnScroll('default-container__text', 2000); // Для элемента с id 'default-container__text'
-        fadeInOnScroll('classes', 1000); // Для элемента с id 'classes'
+        fadeInOnScroll('default-container__p', 500); // Для элемента с id 'default-container__p'
+        fadeInOnScroll('default-container__text', 1000); // Для элемента с id 'default-container__text'
+        fadeInOnScroll('classes', 400); // Для элемента с id 'classes'
         fadeInOnScroll('default-container__button', 1000); // Для элемента с id 'default-container__button'
     };
 
