@@ -93,7 +93,7 @@
                 </div>
                 <div class="main__btns">
                     <a href="#" class="main-btn__about main__btn">Про Кiностудiю</a>
-                    <a href="#" class="main-btn__more main__btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="28.88" fill="red" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg><span>Всі фільми кіностудії на нашому каналі в YouTube</span></a>
+                    <a href="https://www.youtube.com/@kurazh_studio" class="main-btn__more main__btn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="28.88" fill="red" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg><span>Всі фільми кіностудії на нашому каналі в YouTube</span></a>
                 </div>
             </div>
         </div>
@@ -694,7 +694,7 @@
     function fadeInOnScroll(elementId, duration) {
         var distance = window.innerWidth; // Начальное расстояние для анимации справа налево
         var op = 0; // Счетчик для каждой анимации
-        var interval = 10; // Интервал в миллисекундах
+        var interval = 1; // Интервал в миллисекундах
         var increment = interval / duration;
         var element = document.getElementById(elementId);
         var isVisible = false;
@@ -730,10 +730,10 @@
 
     // Animation in Default-container section
     window.onload = function() {
-        fadeInOnScroll('default-container__p', 500); // Для элемента с id 'default-container__p'
-        fadeInOnScroll('default-container__text', 1000); // Для элемента с id 'default-container__text'
-        fadeInOnScroll('classes', 400); // Для элемента с id 'classes'
-        fadeInOnScroll('default-container__button', 1000); // Для элемента с id 'default-container__button'
+        fadeInOnScroll('default-container__p', 100); // Для элемента с id 'default-container__p'
+        fadeInOnScroll('default-container__text', 300); // Для элемента с id 'default-container__text'
+        fadeInOnScroll('classes', 100); // Для элемента с id 'classes'
+        fadeInOnScroll('default-container__button', 100); // Для элемента с id 'default-container__button'
     };
 
 
