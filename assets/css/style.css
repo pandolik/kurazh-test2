@@ -312,6 +312,9 @@ section {
         padding: 100px 15px 30px 15px;
         overflow: auto;
         transition: left 0.6s ease 0s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     /*.menu__body::before {
         content: "";
@@ -338,45 +341,23 @@ section {
 
     .menu-item__icon {
         display: block;
+        margin-top: auto;
     }
     .menu-item__icon .social-media__header {
-        display: flex;
-        justify-content: space-around;
         align-items: self-end;
         font-size: 45px;
     }
-/*    .menu-item__icon > .social-media__header {margin-top: 100%;}*/
     .list-link {
-        color: #fff;
         font-weight: 800;
-        text-decoration: none;
     }
     .list-link:hover {
         color: #333;
 
     }
-    .menu__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-.menu-item__icon {
-    margin-top: auto; /* Помещает иконки внизу блока */
-}
-
 .list.social-media__header {
-    list-style: none; /* Убирает маркеры списка */
-    padding: 0; /* Убирает отступы у списка */
     display: flex;
-    justify-content: center; /* Центрирует иконки по горизонтали */
+    justify-content: space-around;
 }
-
-.list-item {
-    margin: 0 5px; /* Дополнительные стилизации для иконок (необязательно) */
-}
-
 }
 @media (max-width: 560px) {
     .header__container {
@@ -713,11 +694,15 @@ section {
     justify-content: center;
     align-items: center;
     margin: auto;
+    box-shadow: 15px 18px 16px rgba(255, 255, 0, 0.9); /* Это добавляет тень */
+    border-radius: 8px; /* Для скругления углов */
+    overflow: hidden; 
+    padding-bottom: 80px;  
 }
 .cinemas {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: center;
     gap: 50px 20px 100px 20px;
@@ -826,7 +811,6 @@ section {
     }
     .cinemas .cinemas__card {
         width: 400px;
-        height: 350px;
     }
 }
 @media(max-width: 1400px) {
@@ -847,42 +831,49 @@ section {
 @media(max-width: 1200px) {
     .cinemas {
         margin-bottom: 20px; 
+        gap: 50px 10px 100px 10px;
+        padding: 80px 40px 0;
     }
-    .cinemas .cinemas__card {
+    /*.cinemas .cinemas__card {
         width: 270px;
         height: 300px;
-    }
-    .imgbx  {
-        min-width: 250px;
-    }
+    }*/
+    /*.imgbx  {
+        width: 100%;
+    }*/
 }
 @media(max-width: 1100px) {
     .cinemas {
-        padding: 80px 30px 0;
+        padding: 80px 25px 0;
     }
 }
 @media(max-width: 1050px) {
     .cinemas {
         margin-bottom: 20px; 
+        padding: 80px 15px 0;
     }
 }
 @media(max-width: 991.98px) {
     .cinema {
         flex-direction: column;
         padding-top: 30px;
+        box-shadow: none;
+        border-radius: 0; 
+        overflow: none; 
+        padding-bottom: 0; 
     }
     .cinemas {
         margin-bottom: 20px; 
         display: flex;
         flex-wrap: wrap;
-        padding: 0px 0px 0;
+        padding: 0;
     }
     .cinemas:first-child {
         margin-top: 60px;
         margin-left: 0;
     }
     .cinemas .cinemas__card {
-        width: 600px;
+        width: 400px;
         height: 350px;
     }
     .imgbx {
