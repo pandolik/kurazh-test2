@@ -2,10 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600;700&display=swap');
-@font-face {
-  font-family: "Gerhaus";
-  src: url('gerhaus/Gerhaus-Regular.ttf') format('truetype');
-}
+
 /*Обнуление*/
 * {
     margin: 0;
@@ -97,11 +94,13 @@ section {
     transition: top 0.5s ease-in-out;
     z-index: 1000;
     background-color: #333;
-/*    border-end-start-radius: 50%;*/
 }
 .icon-menu {
       background-color: inherit;
-
+}
+.menu__list>.menu__item>i.fa-solid {
+        font-size: 32px;
+        margin-right: 15px;
 }
 .header__container {
     display: flex;
@@ -131,8 +130,6 @@ section {
 .menu__link:hover {
     color: grey;
     transition: 0.3s;
-/*    text-decoration: underline;*/
-/*    color: #fff;*/
     padding-left: 2px;
     border-bottom: #ff0000 solid 2px;
     padding-bottom: 10px;
@@ -785,6 +782,7 @@ section {
     color: #fff;
     font-size: 500;
     border-radius: 8px;
+    cursor: pointer;
 }
 .imgbx {
     min-width: 300px;
@@ -813,10 +811,16 @@ section {
         width: 400px;
     }
 }
+@media(max-width: 1499.98px) {
+    .cinemas {
+        gap: 50px 15px 100px 15px;
+        padding: 80px 20px 0;
+
+    }
+}
 @media(max-width: 1400px) {
     .cinemas .cinemas__card {
         width: 350px;
-        height: 300px;
     }
 }
 @media(max-width: 1300px) {
@@ -825,7 +829,6 @@ section {
     }
     .cinemas .cinemas__card {
         width: 300px;
-        height: 300px;
     }
 }
 @media(max-width: 1200px) {
@@ -882,7 +885,7 @@ section {
 }
 @media(max-width: 767.98px) {
     .cinema {
-        padding-top: 0px;
+        padding-top: 20px;
     }
  }
 @media(max-width: 634px) {
@@ -899,10 +902,6 @@ section {
     }
 }
 @media(max-width: 560px){
-    /*.cinemas {
-        margin-bottom: 20px; 
-    }*/
-
     .cinemas .cinemas__card {
         width: 360px;
         height: 350px;
@@ -913,61 +912,41 @@ section {
         justify-content: center;
         height: 400px;
         position: relative;
-        margin: 0 30px;
     }
     .cinemas:first-child {
         margin: 60px 0 0px 0;
     }
     
     .cinemas .cinemas__card {
-        width: 300px;
-        height: 350px;
-    }
+        width: 300px;    }
     .imgbx {
         min-width: 300px;
     }
 }
-
 /*Як проходять наші заняття*/
-.section__classes {
-    margin: 0 0 40px 0;
-}
+/*-----------------CLASSES------------------------*/
+
 .classes {
     font-size: clamp(28px, 8vw, 72px);
     padding: 20px 0 0 0;
     opacity: 0;
 }
-.media {
+/*-------------mp4 player-----------*/
+.player__wrapp {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 100%;
-    margin-left: 50px;
 }
-/*mp4 player*/
 .player {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 80%;
+    width: 75%;
+    margin: 0 auto;
+/*    height: 100%;*/
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.5);
-    margin-left: 60px;
 }
-/*.animated-text {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: bold;
-    color: #fff; 
-    animation-duration: 6s;
-}*/
 @media (max-width: 991.98px) {
     .classes {
         font-size: 40px;
-/*        text-align: center;*/
         margin: auto 0;
-}
-.player {
-    margin-left: 0;
 }
 }
 @media (max-width: 634px) {
@@ -988,9 +967,7 @@ section {
 }
 }
 
-
-
-/*OUR PROJECTS SECTION*/
+/*--------------------OUR PROJECTS SECTION--------------------*/
 .default-container {
    margin: 60px 0 40px 0;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -1089,7 +1066,6 @@ section {
 
 .poster {
     width: 400px;
-/*    height: 400px;*/
 }
 .default-container {
     margin-top: 30px;
@@ -1174,10 +1150,10 @@ section {
 }
 }
 @media(max-width: 634px) {
-/*.default-container {
-    width: 70%;
-    height: 80%;
-}*/
+.posters-now {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(215px, 3fr));
+}
 .curved-line-4 {
     margin: 0;    
 }
@@ -1201,7 +1177,6 @@ section {
     height: 70%;}
 .poster-now {
     width: 100%;
-/*    height: 500px;*/
 }
 #default-container__p {
     font-size: 18px;}
