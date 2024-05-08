@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KURAZH STUDIO</title>
+  <title>СТУДIЯ КУРАЖ</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/kurazh.png">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style-slick.css">
   <link rel="stylesheet" type="text/css" href="assets/css/styles-for-animations.css">
@@ -16,7 +17,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> 
   <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
   <script src="./dist/app.js"></script>
-  <script src="https://kit.fontawesome.com/a5283a710b.js" crossorigin="anonymous"></script>
   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH-fJU9dPY45wHRb5pp_733JAELFvhNAw&callback=console.debug&libraries=maps,marker&v=beta"></script>
 </head>
 <body>
@@ -27,19 +27,19 @@
             </a>
             <nav class="header__menu menu">
                 <div class="menu__body">
-                    <button class="menu__icon icon-menu" type="button"></button>
+                    <!-- <button class="menu__icon icon-menu" type="button"></button> -->
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <span href="index.html" class="menu__link" id="menu__home">Головна</span>
+                            <i class="fa-solid foot-ico fa-person"></i>
+                            <span class="menu__link" id="menu__curators">Куратори</span>
                         </li>
                         <li class="menu__item">
-                            <span href="#" class="menu__link" id="menu__curators">Куратори</span>
+                            <i class="fa-solid foot-ico fa-phone"></i>
+                            <span class="menu__link" id="menu__contact">Контакти</span>
                         </li>
                         <li class="menu__item">
-                            <span href="#" class="menu__link" id="menu__contact">Контакти</span>
-                        </li>
-                        <li class="menu__item">
-                            <span href="#" class="menu__link" id="menu__process">Процес</span>
+                            <i class="fa-solid fa-video"></i>
+                            <span class="menu__link" id="menu__process">Процес</span>
                         </li>
                     </ul>
                         <div class="menu-item__icon">
@@ -62,7 +62,7 @@
             </nav>
             <div class="header__cart cart-header">
                 <span class="cart-header__text" id="cart-header__text">Проєкти</span>
-                <span class="cart-header__quantity" id="cart-header__quantity" title="Проєкти">12</span>
+                <span class="cart-header__quantity" id="cart-header__quantity" title="Проєкти">5</span>
             </div>
             <div href="#" class="header__button button" id="header__button">В команду</div>
             <div class="menu__icon icon-menu" type="button">
@@ -145,46 +145,48 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas dolorum
                      voluptates corrupti tenetur a optio alias dolore praesentium? Sapiente tempore recusandae obcaecati, 
                     enim veritatis ex eveniet voluptatem nobis nulla?</p>
-                    <div href="#" id="cinemas__read-more3">ЧИТАТИ БiЛЬШЕ</div>
+                    <div id="cinemas__read-more3">ЧИТАТИ БiЛЬШЕ</div>
             </div>
         </div>
     </div></section>
 <hr>
 <section class="section__classes">
     <div class="classes animated-text animate__animated animate__bounceIn" id="classes">Як проходять нашi заняття: </div>
-        <div class="player j-player">
-            <em class="fas fa-pause player__main-icon j-pause"></em>
-            <em class="fas fa-play player__main-icon j-play"></em>
-            <video
-              src="./player/classes.mp4"
-              class="player__video">
-            </video>
-            <div class="player__panel">
-                <div class="player__lines j-line">
-                    <div class="player__hint j-hint"></div>
-                    <div class="player__line player__line--current j-line-current"></div>
-                    <div class="player__line player__line--ghost j-line-ghost"></div>
-                    <div class="player__line player__line--full"></div>
-                </div>
+        <div class="player__wrapp">
+            <div class="player j-player">
+                <em class="fas fa-pause player__main-icon j-pause"></em>
+                <em class="fas fa-play player__main-icon j-play"></em>
+                <video
+                  src="./player/Promo.mp4"
+                  class="player__video">
+                </video>
+                <div class="player__panel">
+                    <div class="player__lines j-line">
+                        <div class="player__hint j-hint"></div>
+                        <div class="player__line player__line--current j-line-current"></div>
+                        <div class="player__line player__line--ghost j-line-ghost"></div>
+                        <div class="player__line player__line--full"></div>
+                    </div>
 
-                <div class="player__panel-block">
-                    <button class="player__panel-button j-toggle-video">
-                        <em class="fas fa-play"></em>
-                    </button>
-                    <button class="player__panel-button player__panel-button--volume">
-                        <em class="fa player__volume-icon j-toggle-volume"></em>
-                        <input type="range" class="player__volume j-volume-input">
-                    </button>
-                    <span class="j-duration">0:00</span>
-                </div>
+                    <div class="player__panel-block">
+                        <button class="player__panel-button j-toggle-video">
+                            <em class="fas fa-play"></em>
+                        </button>
+                        <button class="player__panel-button player__panel-button--volume">
+                            <em class="fa player__volume-icon j-toggle-volume"></em>
+                            <input type="range" class="player__volume j-volume-input">
+                        </button>
+                        <span class="j-duration">0:00</span>
+                    </div>
 
-                <div class="player__panel-block">
-                    <button class="player__panel-button j-fullscreen">
-                        <em class="fas fa-expand"></em>
-                    </button>
+                    <div class="player__panel-block">
+                        <button class="player__panel-button j-fullscreen">
+                            <em class="fas fa-expand"></em>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div> 
+            </div> 
+        </div>
 </section>
 
 <section class="default-container">
@@ -509,7 +511,7 @@
     </footer>
 </div>
 <script type="text/javascript">
-    // Open menu
+// Open menu
     document.addEventListener('click', documentClick);
     function documentClick(e) {
         const targetItem = e.target;
@@ -530,7 +532,7 @@
       }
     };
 
-    // Click on the button, opening a hidden block.
+// Click on the button, opening a hidden block.
     const button = document.getElementById("button-our-projects-more");
     const blocks = document.querySelectorAll(".block-container");
     button.addEventListener("click", function () {
@@ -545,18 +547,7 @@
     });
 
 
-    // Нахождения блока по ID и переместить пользователя к нему туда
-    // Главная
-    document.getElementById('menu__home').addEventListener('click', function() {
-        var block = document.querySelector('body');
-        block.classList.add('block-outlined');
-        block.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(function() {
-            block.classList.remove('block-outlined');
-            // Закрываем меню после прокрутки
-            document.documentElement.classList.remove('menu-open');
-        }, 0); // Remove the outlined effect after 1 second (1000 milliseconds)
-    });
+// Нахождения блока по ID и переместить пользователя к нему туда
     // header__quantity
     document.getElementById('cart-header__quantity').addEventListener('click', function() {
         var block = document.querySelector('.section-wrapper__projects');
@@ -614,6 +605,7 @@
             document.documentElement.classList.remove('menu-open');
         }, 200); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
+
     document.getElementById('cinemas__read-more1').addEventListener('click', function() {
         var block = document.querySelector('.block__projects1');
         block.classList.add('block-outlined');
@@ -645,7 +637,7 @@
 
 
 
-    // Default Container images
+// Default Container images
     document.getElementById('image-project1').addEventListener('click', function() {
         var block = document.querySelector('.block__projects1');
         block.classList.add('block-outlined');
@@ -690,7 +682,7 @@
 
 
 
-    // Animation in Main section
+// Animation in Main section
     function fadeInOnScroll(elementId, duration) {
         var distance = window.innerWidth; // Начальное расстояние для анимации справа налево
         var op = 0; // Счетчик для каждой анимации
@@ -728,7 +720,7 @@
     }
 
 
-    // Animation in Default-container section
+// Animation in Default-container section
     window.onload = function() {
         fadeInOnScroll('default-container__p', 100); // Для элемента с id 'default-container__p'
         fadeInOnScroll('default-container__text', 300); // Для элемента с id 'default-container__text'
@@ -746,6 +738,6 @@
     <script src="assets/js/slick.min.js" type="text/javascript"></script>
     <!-- <script src="assets/js/main.js" type="text/javascript"></script> -->
     <script src="assets/js/swiper-bundle.min.js" type="text/javascript"></script>
-
+<script src="https://kit.fontawesome.com/a5283a710b.js" crossorigin="anonymous"></script>
 </body>
 </html>
