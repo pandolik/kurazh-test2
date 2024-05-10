@@ -94,6 +94,9 @@ section {
     z-index: 1000;
     background-color: #333;
 }
+.mobile__menu .menu__item {
+    display: none;
+}
 .icon-menu {
       background-color: inherit;
 }
@@ -245,6 +248,11 @@ section {
     }
 }   
 @media (max-width: 767.98px) {
+    .mobile__menu .menu__item {
+        display: block; }
+    .desktop__menu .menu__item {
+        display: none; }
+
     .button {
         right: 10px;
     }
