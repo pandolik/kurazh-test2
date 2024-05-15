@@ -14,7 +14,7 @@ section {
 [class*="wrapper"] {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0px;
 }
 
 .list-link:hover {
@@ -959,7 +959,7 @@ section {
     height: 100%;
 }
 .curators__wrapper h2 {
-    font-size: clamp(40px, 5vw, 72px);
+    font-size: clamp(16px, 5vw, 72px);
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -1000,8 +1000,8 @@ section {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 500px;
-    margin: 40px 20px;
+    flex: 1 0 400px;
+    margin: 0px 20px;
     justify-content: space-around;
     padding: 30px 20px;
 }
@@ -1036,12 +1036,18 @@ section {
     color: lavender;
     font-weight: 600;
 }
-@media(max-width:1280px) {
+@media(max-width:1279px) {
     .curators__1 {margin: 0 0 15px 0;}
     .curators__2 {margin: 15px 0 0 0;}
 }
 @media(max-width:767.98px) {
     .curators {padding: 30px 0}
+    .curators__1 {
+        border-top-left-radius: 10%;
+        border-bottom-right-radius: 5%;}
+    .curators__2 {
+        border-top-right-radius: 10%;
+        border-bottom-left-radius: 5%;}
 }
 /*--------------------OUR PROJECTS SECTION--------------------*/
 .default-container {
