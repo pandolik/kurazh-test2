@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/styles-for-animations.css">
   <link rel="stylesheet" type="text/css" href="assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> <!-- Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -215,6 +215,49 @@
         </div>
 </section>
 
+<section class="curators__wrapper">
+        <h2>Наші улюблені куратори <!--STIKERS Avatar Icon--></h2>
+        <div class="curators__main">
+            <div class="curators__body">
+                <div class="curators">
+                    <div class="curators__1">
+                        <div class="curators__photo">
+                            <img src="assets/img/curators/curator1.png" alt="КУратор">
+                        </div>
+                        <hr>
+                        <div class="curators__name">Устименко Наталія Олегівна</div>
+                        <div class="curators__info">
+                            <ul class="curators__list">
+                                <li>60+ років</li>
+                                <li>Спiвзасновниця кіностудії КУРАЖ</li>
+                                <li>Найкраща сценаристка</li>
+                                <li>Режисер</li>
+                                <li>Оператор</li>
+                                <li>20 років досвіду</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="curators__2">
+                        <div class="curators__photo">
+                            <img src="assets/img/curators/curator2.png" alt="КУратор">
+                        </div>
+                        <hr>
+                        <div class="curators__name">Крутоус Володимир Васильович</div>
+                        <div class="curators__info">
+                            <ul class="curators__list">
+                                <li>60+ років</li>
+                                <li>Спiвзасновник кіностyдії КУРАЖ</li>
+                                <li>Режисер</li>
+                                <li>Оператор</li>
+                                <li>20 років досвіду</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <section class="default-container">
     <p>Discover</p>
     <div>
@@ -272,7 +315,8 @@
         <div class="slider__item">
             <img decoding="async" loading="lazy" src="assets/img/slick/slides/big/05.png" alt="photo">
         </div>
-    </div></div>
+    </div>
+</div>
 <section class="section__team">
     <div class="team">
         <div class="team__body">
@@ -545,8 +589,7 @@
             document.documentElement.classList.toggle('menu-open');
         }
     }
-
-    // Scroll
+// Scroll
     window.onscroll = function() {
       var el = document.getElementsByTagName('header')[0];
       var className = 'small';
@@ -557,7 +600,6 @@
           el.classList.remove(className);
       }
     };
-
 // Click on the button, opening a hidden block.
     const button = document.getElementById("button-our-projects-more");
     const blocks = document.querySelectorAll(".block-container");
@@ -571,8 +613,6 @@
         }
       });
     });
-
-
 // Нахождения блока по ID и переместить пользователя к нему туда
     // header__quantity
     document.getElementById('cart-header__quantity').addEventListener('click', function() {
@@ -660,9 +700,6 @@
             document.documentElement.classList.remove('menu-open');
         }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
-
-
-
 // Default Container images
     document.getElementById('image-project1').addEventListener('click', function() {
         var block = document.querySelector('.block__projects1');
@@ -705,9 +742,6 @@
             block.classList.remove('block-outlined');
         }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
-
-
-
 // Animation in Main section
     function fadeInOnScroll(elementId, duration) {
         var distance = window.innerWidth; // Начальное расстояние для анимации справа налево
@@ -744,21 +778,17 @@
 
         window.addEventListener('scroll', fadeIn);
     }
-
-
 // Animation in Default-container section
     window.onload = function() {
         fadeInOnScroll('default-container__p', 100); // Для элемента с id 'default-container__p'
         fadeInOnScroll('default-container__text', 300); // Для элемента с id 'default-container__text'
         fadeInOnScroll('classes', 100); // Для элемента с id 'classes'
-        fadeInOnScroll('default-container__button', 100); // Для элемента с id 'default-container__button'
+        fadeInOnScroll('default-container__button', 200); // Для элемента с id 'default-container__button'
     };
-
-
 
 </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" async></script>
-    <!-- <script src="script.js" type="text/javascript" async></script> -->
+    <script src="script.js" type="text/javascript" async></script>
     <script src="./dist/app.js" type="text/javascript" async></script>
     <script src="assets/js/script-slick.js" type="text/javascript" async></script>
     <script src="assets/js/slick.min.js" type="text/javascript" async></script>
