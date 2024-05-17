@@ -38,7 +38,7 @@
                             <span class="menu__link" id="menu__contact">Контакти</span>
                         </li>
                         <li class="menu__item">
-                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid foot-ico fa-video"></i>
                             <span class="menu__link" id="menu__process">Процес</span>
                         </li>
                     </ul>
@@ -61,7 +61,7 @@
                         </li>
                         <li class="menu__item">
                             <i class="fa-solid foot-ico fa-person" style="width: 31px; height: 25px;"></i>
-                            <span class="menu__link" id="menu__curators">Куратор</span>
+                            <span class="menu__link" id="menu__curators">Куратори</span>
                         </li>
                         <li class="menu__item">
                             <i class="fa-solid foot-ico fa-people-group" style="width: 31px; height: 25px;"></i>
@@ -222,7 +222,7 @@
                 <div class="curators">
                     <div class="curators__1">
                         <div class="curators__photo">
-                            <img src="assets/img/curators/curator1.png" decoding="async" loading="lazy"  alt="КУратор">
+                            <img src="assets/img/curators/curator1.png" decoding="async" loading="lazy" alt="КУратор">
                         </div>
                         <hr>
                         <div class="curators__name">Устименко Наталія Олегівна</div>
@@ -239,7 +239,7 @@
                     </div>
                     <div class="curators__2">
                         <div class="curators__photo">
-                            <img src="assets/img/curators/curator2.png" decoding="async" loading="lazy"  alt="КУратор">
+                            <img src="assets/img/curators/curator2.png" decoding="async" loading="lazy" alt="КУратор">
                         </div>
                         <hr>
                         <div class="curators__name">Крутоус Володимир Васильович</div>
@@ -301,21 +301,28 @@
         <div class="default-container__button">
             <button id="default-container__button">Дивитися все <i class="fa-solid fa-angle-right"></i></button>
         </div>
-<div class="wrapper-slider">
-    <div class="slider">
-        <div class="slider__item filter">
-            <img src="assets/img/slick/slides/big/06.png" alt="photo">
+<div class="wrapper__slider">
+    <div id="slider__wrapp">
+        <div id="spin-container">
+            <img src="assets/img/media/team/image-team1.png" alt=""/>
+            <img src="assets/img/media/team/image-team2.png" alt=""/>
+            <img src="assets/img/media/team/image-team3.png" alt=""/>
+            <img src="assets/img/media/team/image-team4.png" alt=""/>
+            <img src="assets/img/media/team/image-team5.png" alt=""/>
+            <img src="assets/img/media/team/image-team6.png" alt=""/>
+            <img src="assets/img/media/team/image-team7.png" alt=""/>
+            <img src="assets/img/media/team/image-team8.png" alt=""/>
         </div>
-        <div class="slider__item">
-            <img src="assets/img/slick/slides/big/03.png" alt="photo">
-        </div>
-        <div class="slider__item filter">
-            <img src="assets/img/slick/slides/big/04.png" alt="photo">
-        </div>
-        <div class="slider__item">
-            <img src="assets/img/slick/slides/big/05.png" alt="photo">
-        </div>
+        <div id="ground"></div>
     </div>
+</div>
+
+<div id="enlarged-section">
+  <button id="close-button"><i class="fa-regular fa-circle-xmark"></i></button>
+  <img id="enlarged-image" src="" alt="Enlarged">
+  <div class="slider__circle">
+    <span></span>
+</div>
 </div>
 <section class="section__team">
     <div class="team">
@@ -635,7 +642,7 @@
             block.classList.remove('block-outlined');
             // Закрываем меню после прокрутки
             document.documentElement.classList.remove('menu-open');
-        }, 1000); // Remove the outlined effect after 1 second (1000 milliseconds)
+        }, 100); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
     // Button in header
     document.getElementById('header__button').addEventListener('click', function() {
@@ -671,6 +678,34 @@
             document.documentElement.classList.remove('menu-open');
         }, 200); // Remove the outlined effect after 1 second (1000 milliseconds)
     });
+
+
+
+    // Процес занять
+    document.getElementById('menu__curators').addEventListener('click', function() {
+        var block = document.querySelector('.curators__wrapper');
+        block.classList.add('block-outlined');
+        block.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+            block.classList.remove('block-outlined');
+
+            document.documentElement.classList.remove('menu-open');
+        }, 200); // Remove the outlined effect after 1 second (1000 milliseconds)
+    });
+    // Процес занять
+    document.getElementById('menu__team').addEventListener('click', function() {
+        var block = document.querySelector('.section__team');
+        block.classList.add('block-outlined');
+        block.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(function() {
+            block.classList.remove('block-outlined');
+            // Закрываем меню после прокрутки
+            document.documentElement.classList.remove('menu-open');
+        }, 200); // Remove the outlined effect after 1 second (1000 milliseconds)
+    });
+
+
+
 
     document.getElementById('cinemas__read-more1').addEventListener('click', function() {
         var block = document.querySelector('.block__projects1');
@@ -785,6 +820,158 @@
         fadeInOnScroll('classes', 100); // Для элемента с id 'classes'
         fadeInOnScroll('default-container__button', 200); // Для элемента с id 'default-container__button'
     };
+
+</script>
+<script type="">
+  var radius = 240; // how big of the radius
+  var autoRotate = true; // auto rotate or not
+  var rotateSpeed = -60; // unit: seconds/360 degrees
+  var imgWidth = 160; // width of images (unit: px)
+  var imgHeight = 180; // height of images (unit: px)
+
+  // ===================== start =======================
+  // animation start after 1000 milliseconds
+  setTimeout(init, 1000);
+
+  var odrag = document.getElementById("slider__wrapp");
+  var ospin = document.getElementById("spin-container");
+  var aImg = ospin.getElementsByTagName("img");
+  var aVid = ospin.getElementsByTagName("video");
+  var aEle = [...aImg, ...aVid]; // combine 2 arrays
+
+  // Size of images
+  ospin.style.width = imgWidth + "px";
+  ospin.style.height = imgHeight + "px";
+
+  // Size of ground - depend on radius
+  var ground = document.getElementById("ground");
+  ground.style.width = radius * 3 + "px";
+  ground.style.height = radius * 3 + "px";
+
+  function init(delayTime) {
+    for (var i = 0; i < aEle.length; i++) {
+      aEle[i].style.transform =
+        "rotateY(" +
+        i * (360 / aEle.length) +
+        "deg) translateZ(" +
+        radius +
+        "px)";
+      aEle[i].style.transition = "transform 1s";
+      aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
+    }
+  }
+
+  function applyTranform(obj) {
+    // Constrain the angle of camera (between 0 and 180)
+    if (tY > 180) tY = 180;
+    if (tY < 0) tY = 0;
+
+    // Apply the angle
+    obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+  }
+
+  function playSpin(yes) {
+    ospin.style.animationPlayState = yes ? "running" : "paused";
+  }
+
+  var sX, sY, nX, nY, desX = 0, desY = 0, tX = 0, tY = 10;
+
+  // auto spin
+  if (autoRotate) {
+    var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+    ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
+  }
+
+  // setup events
+  document.onpointerdown = function (e) {
+    clearInterval(odrag.timer);
+    e = e || window.event;
+    var sX = e.clientX,
+      sY = e.clientY;
+
+    this.onpointermove = function (e) {
+      e = e || window.event;
+      var nX = e.clientX,
+        nY = e.clientY;
+      desX = nX - sX;
+      desY = nY - sY;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      applyTranform(odrag);
+      sX = nX;
+      sY = nY;
+    };
+
+    this.onpointerup = function (e) {
+      odrag.timer = setInterval(function () {
+        desX *= 0.95;
+        desY *= 0.95;
+        tX += desX * 0.1;
+        tY += desY * 0.1;
+        applyTranform(odrag);
+        playSpin(false);
+        if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+          clearInterval(odrag.timer);
+          playSpin(true);
+        }
+      }, 17);
+      this.onpointermove = this.onpointerup = null;
+    };
+
+    return false;
+  };
+
+  document.onmousewheel = function (e) {
+    e = e || window.event;
+    var d = e.wheelDelta / 20 || -e.detail;
+    radius += d;
+    init(1);
+  };
+
+  // New JavaScript for enlarging image on click
+document.addEventListener('DOMContentLoaded', () => {
+  const enlargedSection = document.getElementById('enlarged-section');
+  const enlargedImage = document.getElementById('enlarged-image');
+  const closeButton = document.getElementById('close-button');
+  const aImg = document.querySelectorAll('#spin-container img');
+
+  Array.from(aImg).forEach(img => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      playSpin(false); // Остановить анимацию
+      enlargedImage.src = img.src; // Установить источник увеличенного изображения
+      enlargedSection.style.display = 'flex'; // Показать увеличенную секцию
+      setTimeout(() => {
+        enlargedSection.classList.add('show'); // Добавить класс для плавного появления
+      }, 10); // Небольшая задержка для запуска плавного перехода
+    });
+  });
+
+  const closeEnlargedSection = () => {
+    enlargedSection.classList.remove('show'); // Удалить класс для плавного исчезновения
+    setTimeout(() => {
+      enlargedSection.style.display = 'none'; // Скрыть увеличенную секцию после завершения анимации
+      playSpin(true); // Возобновить анимацию
+    }, 500); // Задержка совпадает с продолжительностью перехода
+  };
+
+  closeButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeEnlargedSection();
+  });
+
+  // Закрытие окна при нажатии на любое место на странице
+  document.addEventListener('click', closeEnlargedSection);
+
+  // Предотвращение закрытия окна при клике на само изображение или на enlargedSection
+  enlargedSection.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  enlargedImage.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
 
 </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" async></script>
