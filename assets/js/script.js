@@ -266,29 +266,20 @@ function updateImageSizes() {
     radius = 440; // default radius
   }
 
-  // Обновляем размеры контейнера с изображениями
   ospin.style.width = imgWidth + "px";
   ospin.style.height = imgHeight + "px";
 
-  // Обновляем размеры и положение всех изображений
   for (var i = 0; i < aEle.length; i++) {
     aEle[i].style.width = imgWidth + "px";
     aEle[i].style.height = imgHeight + "px";
-    aEle[i].style.transform =
-      "rotateY(" +
-      i * (360 / aEle.length) +
-      "deg) translateZ(" +
-      radius +
-      "px)";
+    aEle[i].style.transform = "rotateY(" + i * (360 / aEle.length) + "deg) translateZ(" + radius + "px)";
   }
 
-  // Обновляем размеры ground
   ground.style.width = radius * 3 + "px";
   ground.style.height = radius * 3 + "px";
 }
 
 // ===================== start =======================
-// animation start after 1000 milliseconds
 setTimeout(() => {
   init(1000);
   updateImageSizes();
@@ -296,23 +287,15 @@ setTimeout(() => {
 
 function init(delayTime) {
   for (var i = 0; i < aEle.length; i++) {
-    aEle[i].style.transform =
-      "rotateY(" +
-      i * (360 / aEle.length) +
-      "deg) translateZ(" +
-      radius +
-      "px)";
+    aEle[i].style.transform = "rotateY(" + i * (360 / aEle.length) + "deg) translateZ(" + radius + "px)";
     aEle[i].style.transition = "transform 1s";
     aEle[i].style.transitionDelay = delayTime || (aEle.length - i) / 4 + "s";
   }
 }
 
 function applyTranform(obj) {
-  // Constrain the angle of camera (between 0 and 180)
   if (tY > 180) tY = 180;
   if (tY < 0) tY = 0;
-
-  // Apply the angle
   obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
 }
 
@@ -332,13 +315,11 @@ if (autoRotate) {
 document.onpointerdown = function (e) {
   clearInterval(odrag.timer);
   e = e || window.event;
-  var sX = e.clientX,
-    sY = e.clientY;
+  var sX = e.clientX, sY = e.clientY;
 
   this.onpointermove = function (e) {
     e = e || window.event;
-    var nX = e.clientX,
-      nY = e.clientY;
+    var nX = e.clientX, nY = e.clientY;
     desX = nX - sX;
     desY = nY - sY;
     tX += desX * 0.1;
@@ -374,10 +355,8 @@ document.onmousewheel = function (e) {
   init(1);
 };
 
-// Update image sizes on window resize
 window.addEventListener('resize', updateImageSizes);
 
-// New JavaScript for enlarging image on click
 document.addEventListener('DOMContentLoaded', () => {
   const enlargedSection = document.getElementById('enlarged-section');
   const enlargedImage = document.getElementById('enlarged-image');
@@ -387,21 +366,21 @@ document.addEventListener('DOMContentLoaded', () => {
   Array.from(aImg).forEach(img => {
     img.addEventListener('click', (e) => {
       e.stopPropagation();
-      playSpin(false); // Остановить анимацию
-      enlargedImage.src = img.src; // Установить источник увеличенного изображения
-      enlargedSection.style.display = 'flex'; // Показать увеличенную секцию
+      playSpin(false);
+      enlargedImage.src = img.src;
+      enlargedSection.style.display = 'flex';
       setTimeout(() => {
-        enlargedSection.classList.add('show'); // Добавить класс для плавного появления
-      }, 10); // Небольшая задержка для запуска плавного перехода
+        enlargedSection.classList.add('show');
+      }, 10);
     });
   });
 
   const closeEnlargedSection = () => {
-    enlargedSection.classList.remove('show'); // Удалить класс для плавного исчезновения
+    enlargedSection.classList.remove('show');
     setTimeout(() => {
-      enlargedSection.style.display = 'none'; // Скрыть увеличенную секцию после завершения анимации
-      playSpin(true); // Возобновить анимацию
-    }, 500); // Задержка совпадает с продолжительностью перехода
+      enlargedSection.style.display = 'none';
+      playSpin(true);
+    }, 500);
   };
 
   closeButton.addEventListener('click', (e) => {
@@ -409,15 +388,12 @@ document.addEventListener('DOMContentLoaded', () => {
     closeEnlargedSection();
   });
 
-  // Закрытие окна при нажатии на любое место на странице
   document.addEventListener('click', closeEnlargedSection);
-
-  // Предотвращение закрытия окна при клике на само изображение или на enlargedSection
   enlargedSection.addEventListener('click', (e) => {
     e.stopPropagation();
   });
-
   enlargedImage.addEventListener('click', (e) => {
     e.stopPropagation();
   });
 });
+
