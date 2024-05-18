@@ -967,7 +967,7 @@ section {
     text-align: center;
 }
 .curators__main {
-    background-color: darkkhaki;
+    background-color: rgba(0, 0, 0, .5);
 }
 .curators__photo {width: 100%; display: flex;justify-content: center;}
 .curators hr {
@@ -1014,7 +1014,7 @@ section {
     border-bottom-right-radius: 15%;
     justify-content: center;
     padding: 40px 0;
-    background-color: #333;
+    background-color: #3d3d3d;
     width: 600px;
 }
 .curators__2 {
@@ -1023,7 +1023,7 @@ section {
     border-bottom-left-radius: 15%;
     padding: 40px 0;
     justify-content: center;
-    background-color: #333;
+    background-color: #3d3d3d;
     width: 600px;
 }
 .curators__list  {
@@ -1045,12 +1045,12 @@ section {
 }
 @media(max-width:767.98px) {
     .curators {padding: 30px 0}
-    .curators__1 {
-        border-top-left-radius: 10%;
-        border-bottom-right-radius: 5%;}
-    .curators__2 {
-        border-top-right-radius: 10%;
-        border-bottom-left-radius: 5%;}
+/*    .curators__1 {*/
+/*        border-top-left-radius: 10%;*/
+/*        border-bottom-right-radius: 5%;}*/
+/*    .curators__2 {*/
+/*        border-top-right-radius: 10%;*/
+/*        border-bottom-left-radius: 5%;}*/
 }
 /*--------------------OUR PROJECTS SECTION--------------------*/
 .default-container {
@@ -1594,7 +1594,6 @@ p#default-container__p {
     width: 40%;
     float: left;
     position: relative;
-/*    font-family: "Fira Sans", sans-serif;*/
 }
 .team__title {
     font-size: 60px;
